@@ -1,0 +1,85 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // để icon vs button canh giữa.
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  min-width: 129px;
+  padding: 16px 16px;
+  background-color: var(--white);
+  border: 1px solid transparent;
+  user-select: none;
+  //   cos min height r..thì k cần padding trái  phải cungc dc
+
+  // dđứng sau 1 cái nút thì cách ra
+  + .wrapper {
+    margin-left: 8px;
+  }
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+// icon been trái title bên phải,, và title bên trái icon bên phải thì
+.icon + .title,
+.title + .icon {
+  margin-left: 8px;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+// Button types
+
+.rounded {
+  // background-color: #00bfff;
+  color: black;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgb(0 0 0/ 6%);
+  border-color: rgba(22, 24, 35, 0.12);
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.2);
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+.primary {
+  color: var(--white) !important;
+  border-color: var(--background-button);
+  background-color: #00bfff;
+
+  &:hover {
+    background-color: var(--background-button);
+  }
+}
+.outline {
+  color: black;
+  border-color: currentColor;
+
+  &:hover {
+    background-color: var(--background-button);
+  }
+}
+.text {
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Button sizes
+.small {
+  min-width: 88px;
+}
+.large {
+  min-width: 136px;
+  padding: 14px 16px;
+}

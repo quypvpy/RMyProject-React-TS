@@ -1,0 +1,87 @@
+.cart {
+  margin-top: 147px;
+  color: var(--color-primary);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.wrapper {
+  color: var(--color-primary);
+  gap: 80px;
+}
+.paper {
+  background-color: unset !important;
+}
+.note {
+  margin-top: 147px;
+  font-size: 30px;
+  color: var(--color-primary);
+}
+.address {
+  padding: 10px 0;
+}
+.total {
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.bill {
+  font-size: 30px;
+  // color: blue;
+  font-weight: bold;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-line);
+}
+.title :nth-child(1) {
+  width: 40%;
+}
+.product-item {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.product-item input {
+  padding: unset;
+}
+.subquantity {
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+.product-item > .name {
+  width: 25%;
+  text-transform: capitalize;
+}
+.left {
+  width: 70%;
+}
+.right {
+  width: 30%;
+}
+.title {
+  font-size: 25px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    display: block !important;
+  }
+  .right,
+  .left {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .total {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}

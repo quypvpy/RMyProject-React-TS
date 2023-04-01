@@ -1,0 +1,47 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.all {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 10px;
+  background: var(--background-white);
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--border-bottom-category);
+}
+.pagination button {
+  font-size: 18px;
+}
+.pagination button svg {
+  width: 2em;
+  height: 2em;
+}
+.detail {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+//  Detail Page.............
+.image img {
+  width: 100%;
+  height: 300px;
+}
+.small img {
+  width: 100%;
+  // height: 50px;
+}
+@media screen and (max-width: 767px) {
+  .detailPage {
+    margin-top: 80px !important;
+  }
+  .grid {
+    gap: 20px !important;
+  }
+  .container {
+    padding: 0 30px !important;
+  }
+}

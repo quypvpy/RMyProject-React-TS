@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
+}
+.icon {
+  width: 15px;
+  height: 15px;
+}
+.title {
+  flex: 1;
+  margin-left: 12px;
+  font-size: 1.4rem;
+  color: rgb(22, 24, 35, 0.5);
+}

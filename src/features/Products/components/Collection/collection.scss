@@ -1,0 +1,125 @@
+.collection-wrapper .panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  // height: 250px;
+  margin: 0 80px;
+  margin-bottom: 40px;
+}
+.collection-wrapper .panel .left {
+  width: 45%;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+.collection-wrapper .panel .left div:nth-child(1) {
+  width: 40%;
+}
+.collection-wrapper .panel .left div:nth-child(2) {
+  width: 60%;
+}
+.collection-wrapper .panel .left .myVideo {
+  border-radius: 99%;
+  height: 100%;
+  width: 100%;
+}
+.collection-wrapper .panel .left div img {
+  width: 100%;
+  height: 100%;
+}
+.collection-wrapper .panel .right {
+  width: 55%;
+}
+.collection-wrapper .panel .right img {
+  width: 100%;
+  height: 100%;
+
+  // border-radius: 50%;
+}
+.collection {
+  margin: 0 40px;
+
+  // height: 400px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.collection .slick-list {
+  padding-left: 6px;
+}
+.collection .left {
+  width: 40%;
+}
+.collection .left img {
+  object-fit: cover;
+  width: 100%;
+  // height: 100%;
+  height: 300px;
+}
+.collection .right {
+  width: 60%;
+  // background-color: aquamarine;
+}
+.collection .item {
+  position: relative;
+  margin-right: 20px;
+  transition: all 0.3s linear;
+  transform: scale(1);
+  // height: 400px;
+}
+.collection .information {
+  margin-top: 10px;
+}
+.collection img {
+  cursor: pointer;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.collection h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+  font-size: 40px;
+}
+
+//  chinhr mui ten
+.collection .slider-icon {
+  color: var(--color-primary);
+  font-size: 50px !important;
+  cursor: pointer !important;
+  position: absolute;
+  z-index: 1;
+}
+.collection .left-icon {
+  bottom: 50%;
+  left: -40px;
+}
+.collection .right-icon {
+  bottom: 50%;
+  right: -30px;
+}
+
+@media screen and (max-width: 1023px) {
+  .collection .right {
+    width: 100%;
+    display: block;
+  }
+  .collection .left {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .collection-wrapper .panel {
+    display: block;
+  }
+  .collection-wrapper .panel .left {
+    width: 100%;
+  }
+  .collection-wrapper .panel .right {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

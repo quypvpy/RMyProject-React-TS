@@ -1,0 +1,158 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@300;600;700&family=Poppins:ital,wght@1,200&display=swap');
+:root {
+  --background-header: rgb(26, 148, 255);
+  --text-primary: #2d3958;
+  --text-second-color: #7b88a8;
+  --text-third-color: black;
+  --background-button: #4f77ff;
+  --white: #fff;
+
+  --black: #000;
+  --green: #54b435;
+
+  // --color-icon-header: #2c3333;
+
+  --color-primary: #0e101c;
+
+  --color-line: #fff;
+  --color-light-blue: #516391;
+
+  // ..............Form Login........
+  // --background-form-login: #060605;
+  --background-form-login: #0d1115;
+  --background-main: #ffffff;
+  --background-white: #fff;
+  --boder-search: #678983;
+  --background-button: #439a97;
+  --background-button-hover: #2dcddf;
+  --border-bottom-category: #ccc;
+
+  --background-input-login: #1a1e28;
+  --border-form-login: #00caff;
+  --color-form-login: #27272a;
+
+  // default layout for headercontact
+  --background-header-contact: #678983;
+  --default-layout-header-height: 70px;
+  --default-layout-header-width: 1550px;
+  --default-layout-width: 1170px;
+
+  --default-layout-horizoltal-spacer: 20px;
+}
+body.dark {
+  // header
+  --color-primary: white;
+  --background-header-contact: linear-gradient(
+    90deg,
+    rgba(22, 14, 105, 1) 0%,
+    rgba(9, 9, 56, 1) 35%,
+    rgba(7, 39, 45, 1) 100%
+  );
+  --background-white: linear-gradient(
+    90deg,
+    rgba(4, 2, 24, 1) 0%,
+    rgba(11, 11, 62, 1) 35%,
+    rgba(11, 84, 96, 1) 100%
+  );
+
+  // --background-main: black;
+  --background-main: linear-gradient(
+    90deg,
+    rgba(4, 3, 14, 1) 1%,
+    rgba(2, 0, 19, 1) 44%,
+    rgba(1, 0, 8, 1) 100%
+  );
+
+  --background-button: linear-gradient(
+    90deg,
+    rgba(24, 6, 36, 1) 1%,
+    rgba(37, 67, 116, 1) 50%,
+    rgba(39, 6, 48, 1) 100%
+  );
+  --background-button-hover: rgb(4, 5, 42);
+  --color-line: black;
+  --boder-search: rgb(9, 4, 60);
+  --border-bottom-category: var(--color-primary);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  //   font-family: 'Montserrat', sans-serif;
+  //   font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  line-height: 24px;
+  text-rendering: optimizeSpeed;
+  background: var(--background-main);
+
+  overflow-x: hidden;
+}
+
+button,
+input,
+[tabindex] {
+  outline: none;
+  border: none;
+}
+a[href] {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+// custom tippy tooltip
+body {
+  .tippy-box {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    background-color: #333;
+  }
+  .tippy-content {
+    padding: 8px 9px;
+  }
+  .tippy-arrow {
+    color: #333;
+  }
+
+  // trong detail Page description có chỗ k css dc
+  #editor-content ul li span span {
+    color: var(--color-primary) !important ;
+  }
+  // rating
+  .MuiRating-iconEmpty {
+    color: var(--color-primary);
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-primary);
+  }
+}
+body::-webkit-scrollbar {
+}
+
+body::-webkit-scrollbar-thumb {
+  // height: 5px;
+  // background-color: #000000;
+}
+
+.SnackbarProvider {
+  // font-size: 24px;
+}
+
+// chỉnh scroolbar k bị ẩn
+// .yarl__no_scroll {
+//   padding-right: unset !important;
+//   overflow: unset !important;
+// }
+
+.detailPage_position {
+  position: absolute;
+  top: 10px;
+  left: 600px;
+}

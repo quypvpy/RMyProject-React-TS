@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.form {
+  width: 50%;
+  margin: 25px;
+  padding: 20px 24px;
+  text-align: center;
+  border: 1px solid var(--border-form-login);
+  box-shadow: 2px -3px 0 var(--border-form-login), 2px 3px 0 var(--border-form-login);
+}
+.form .title {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.content {
+  position: relative;
+  top: 20%;
+}
+.content .title {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+  border-bottom: 1px solid #fff;
+}
+.description {
+  margin-top: 15px;
+}
+.button {
+  // color: #fff;
+  margin-top: 35px;
+  background: transparent;
+  padding: 2px 40px;
+  line-height: unset;
+  border: 1px solid var(--border-form-login);
+}
+
+.create-acount {
+  cursor: pointer;
+}
+.create-acount:hover {
+  border-bottom: 1px solid var(--white);
+}

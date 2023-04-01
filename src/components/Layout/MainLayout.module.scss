@@ -1,0 +1,13 @@
+.container {
+  // min-height: 1000px;
+  max-width: unset;
+}
+
+.content {
+  flex: 1;
+  background-color: aliceblue;
+  min-height: 1000px;
+}
+.wrapper {
+  position: relative;
+}

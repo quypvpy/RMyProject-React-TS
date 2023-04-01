@@ -1,0 +1,46 @@
+.listItemText span {
+  font-size: 20px !important;
+}
+.wrapper {
+  padding-top: unset !important;
+  background: var(--background-white);
+  color: var(--color-primary);
+}
+.title {
+  padding: 0 20px;
+  height: 50px;
+  font-size: 20px;
+  background: var((--background-header-contact));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  cursor: pointer;
+}
+.text {
+  font-size: 25px;
+}
+.icon {
+  font-size: 30px !important;
+}
+.icon-sub {
+  font-size: 25px !important;
+}
+// .wrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+.search {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.search > div {
+  height: 50px;
+}
+.filter {
+  padding: 0 10px;
+}

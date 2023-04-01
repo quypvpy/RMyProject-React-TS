@@ -1,0 +1,78 @@
+.search,
+.search-result {
+  width: 100%;
+}
+.search {
+  position: relative;
+  color: var(--color-primary);
+  width: 400px;
+  height: var(--search-height);
+
+  border: 1.5px solid var(--color-primary);
+  padding-left: 16px;
+  display: flex;
+  background-color: var(--background-white);
+  border-radius: 92px;
+
+  input {
+    flex: 1;
+    height: 100%;
+    color: var(--third-color);
+    font-size: 1.6rem;
+    background: transparent;
+
+    // caret-color: var(--text-primary);
+    caret-color: var(--color-primary);
+  }
+
+  // khi nó not empty ..thì mình đẩy qua .seach
+  input:not(:placeholder-shown) ~ .search-btn {
+    color: rgba(22, 24, 35, 0.75);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: var(--search-top-spacer);
+    right: var(--search-button-width);
+    width: 1px;
+    height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+    background-color: rgba(22, 24, 35, 0.12);
+  }
+
+  // khi input bên trong thẻ cha dc focus.. thì nó sẽ active vào selector này
+  &:focus-within {
+    // border: 1.5px solid rgba(22, 24, 35, 0.2);
+    border: 1.5px solid var(--color-primary);
+  }
+}
+.clear,
+.loading {
+  color: #adb5bd;
+  background-color: transparent;
+  position: absolute;
+  right: calc(var(--search-button-width) + 16px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-btn {
+  width: var(--search-button-width);
+  height: 100%;
+  border-top-right-radius: 92px;
+  border-bottom-right-radius: 92px;
+  background: var(--background-white);
+  font-size: 1.8rem;
+  color: #adb5bd;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+  &:active {
+    background-color: rgba(22, 24, 35, 0.06);
+  }
+}
+// ciustom css
+.custom-login {
+  color: red;
+}

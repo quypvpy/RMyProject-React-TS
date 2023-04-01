@@ -1,0 +1,40 @@
+// Menu wrapper
+.menu-list {
+  width: 224px;
+
+  // Menu item
+  //   voo 1 cấp để mạnh hơn
+  .menu-item {
+    display: block;
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 11px 16px;
+    text-align: left;
+    line-height: 1.8rem;
+
+    &.separate {
+      border-top: 1px solid #333;
+    }
+
+    &:hover {
+      background: var(--background-button);
+    }
+  }
+}
+
+// Header
+.header {
+  position: relative;
+  height: 50px;
+}
+.back-btn {
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+}
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,26 @@
+.listItemText span {
+  font-size: 20px !important;
+}
+.wrapper {
+  background: var(--background-white);
+  padding-top: unset !important;
+  color: var(--color-primary);
+}
+.title {
+  padding: 0 20px;
+  height: 50px;
+  background: var((--background-header-contact));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text {
+  font-size: 25px;
+}
+.icon {
+  font-size: 30px !important;
+}
+.icon-sub {
+  color: var(--color-primary);
+  font-size: 25px !important;
+}

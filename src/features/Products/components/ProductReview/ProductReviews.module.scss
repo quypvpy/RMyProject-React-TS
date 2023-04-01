@@ -1,0 +1,86 @@
+.wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  color: var(--color-primary);
+}
+
+.wrapper > :nth-child(1) {
+  width: 60%;
+}
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+.image {
+  margin-bottom: 20px;
+  width: calc(50% - 30px);
+  height: 300px;
+  -webkit-box-shadow: 5px 5px 5px 0px var(--color-primary),
+    inset 4px 4px 15px 0px var(--color-primary), 5px 5px 15px 5px rgba(190, 255, 48, 0);
+  box-shadow: 5px 5px 5px 0px var(--color-primary), inset 4px 4px 15px 0px var(--color-primary),
+    5px 5px 15px 5px rgba(190, 255, 48, 0);
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper > :nth-child(2) {
+  width: 40%;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  font-size: 20px;
+}
+.avatar {
+  width: 50px !important;
+  height: 50px !important;
+  margin-right: 20px;
+}
+.date {
+  color: #94af9f;
+  font-size: 12px;
+}
+.comment {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+// ..............FormReview................
+
+.input input,
+.textarea textarea {
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+.textarea textarea {
+  line-height: 1.2;
+}
+.label {
+  color: #8d7b68;
+  margin: 20px 0;
+}
+@media screen and (max-width: 1023px) {
+  .image {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    display: block;
+  }
+  .left {
+    width: 100% !important;
+  }
+  .right {
+    padding: 0 40px;
+    width: 100% !important;
+  }
+}

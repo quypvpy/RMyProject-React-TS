@@ -1,0 +1,110 @@
+.panel {
+  display: flex;
+  align-items: stretch;
+  margin-top: 125px;
+  height: 600px;
+}
+.panel .left {
+  position: relative;
+  width: 65%;
+  overflow: hidden;
+}
+
+.panel .right {
+  margin-top: 3px;
+  padding-bottom: 4px;
+  border-left: 5px solid var(--color-line);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  object-fit: cover;
+}
+.panel .right .image {
+  padding: -20px 0;
+  width: 100%;
+  position: relative;
+  height: 50%;
+  cursor: pointer;
+}
+
+.panel .right .image:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s linear;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background: var(--background-main);
+}
+
+.panel .left img,
+.panel .right img {
+  width: 100%;
+  height: 100%;
+  // object-fit: cover;
+}
+.text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  z-index: 1;
+  color: white;
+}
+.text h1 {
+  font-weight: 600;
+}
+.button {
+  color: var(--white) !important;
+  text-transform: none !important;
+  margin: 20px 0 !important;
+  background: var(--background-button) !important;
+  font-size: 16px !important;
+}
+.button:hover {
+  background: var(--background-button-hover) !important;
+}
+
+@media screen and (max-width: 1279px) {
+  .text {
+    top: 10%;
+  }
+  .text h2 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .panel {
+    height: 500px;
+  }
+  .text h2 {
+    display: none;
+  }
+  .text {
+    top: unset;
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .panel {
+    margin-top: 66px;
+    display: block;
+    height: unset;
+  }
+  .panel .right {
+    display: block;
+  }
+  .panel .left {
+    height: 300px;
+    width: 100%;
+  }
+  .panel > div {
+    height: 400px;
+    width: 100%;
+  }
+
+  .panel > div {
+    width: 100% !important;
+  }
+}

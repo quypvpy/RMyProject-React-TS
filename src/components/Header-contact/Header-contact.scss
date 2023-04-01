@@ -1,0 +1,38 @@
+.header-contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0px;
+  transition: all 0.75s linear;
+  background: var(--background-header-contact);
+  z-index: 11;
+}
+.header-contact a {
+  text-decoration: none;
+}
+.header-contact .wrapper {
+  max-width: var(--default-layout-header-width);
+  margin: 0 auto;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+.header-contact .right > a {
+  color: var(--white);
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .header-contact {
+    display: none;
+  }
+}

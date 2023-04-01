@@ -1,0 +1,102 @@
+//........ .panel-slider  laf teen de định danh sửa mình nó thôi. .....
+.panel-slider {
+  height: 100%;
+  width: 100%;
+}
+.panel-slider .slick-track {
+  height: 100%;
+}
+.panel-slider .slick-track .slick-slide div {
+  height: 100%;
+}
+.panel-slider .wrapper {
+  height: 100%;
+}
+.panel-slider .wrapper img {
+  margin-top: 3px;
+  padding-bottom: 7px;
+  height: 100%;
+  width: 100%;
+}
+.panel-slider .myVideo {
+  // width: 827px;
+  width: 100%;
+  height: 100%;
+}
+// .panel-slider .wrapper::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background-color: black;
+//   opacity: 0.1;
+//   width: 100%;
+//   height: 100%;
+// }
+//...........kéo đứa con cao bằng mẹ
+.panel-slider .slick-slider {
+  height: 100%;
+}
+.panel-slider .slick-list {
+  height: 100%;
+}
+
+//.........................Chỉnh dot ...............
+.panel-slider .slick-dots {
+  z-index: 1;
+  bottom: 10px;
+}
+.panel-slider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: white;
+}
+.panel-slider .slick-dots li button:before {
+  color: white;
+  font-size: 18px;
+}
+
+//............. chỉnh icon mũi tên...............
+.panel-slider .slider-icon {
+  color: white;
+  font-size: 50px !important;
+  cursor: pointer !important;
+  position: absolute;
+  z-index: 1;
+}
+.panel-slider .left-icon {
+  top: 50%;
+  left: 0px;
+}
+.panel-slider .right-icon {
+  top: 50%;
+  right: 0px;
+}
+
+//.............Chỉnh text .................
+.panel-slider .text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  z-index: 11111;
+}
+.panel-slider .text h1 {
+  max-width: 600px;
+  font-weight: 600;
+  font-size: 55px;
+}
+.panel-slider .button {
+  text-transform: none !important;
+  margin: 20px 0 !important;
+  background: var(--background-button);
+  font-size: 16px !important;
+}
+.panel-slider .button:hover {
+  background: var(--background-button-hover);
+}
+
+@media screen and (max-width: 1023px) {
+  .panel-slider .text h1 {
+    font-size: 40px;
+  }
+}

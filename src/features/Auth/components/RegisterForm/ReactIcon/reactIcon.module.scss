@@ -1,0 +1,15 @@
+.animation {
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    fill: blue;
+  }
+  50% {
+    fill: greenyellow;
+  }
+  100% {
+    transform: rotate(360deg);
+    fill: purple;
+  }
+}

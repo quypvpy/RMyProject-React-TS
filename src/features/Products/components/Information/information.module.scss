@@ -1,0 +1,22 @@
+.container {
+  display: none;
+  border-bottom: 2px solid var(--background-header-contact);
+}
+.wrapper {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.item {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.icon {
+  font-size: 35px !important;
+  margin-right: 10px;
+}
