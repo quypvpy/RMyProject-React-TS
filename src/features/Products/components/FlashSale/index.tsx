@@ -110,9 +110,22 @@ export function FlashSale(props: FlashSaleProps) {
     ) {
       ;(async () => {
         try {
-          const result = await productApi.get(item.id)
+          const result: any = await productApi.get(item.id)
           setproduct(result)
           setIndexImg(indexImage)
+
+          try {
+            console.log('product', product)
+            const action = AddtoCart({
+              id: result.id,
+              product: result,
+              quantity: 1,
+              indexImage: `flashsale-${indexImage}.jpg`,
+            })
+            dispath(action)
+          } catch (error) {
+            console.log(error)
+          }
         } catch (error) {
           console.log('fail to fetch product', error)
         }
@@ -120,20 +133,6 @@ export function FlashSale(props: FlashSaleProps) {
       return
     } else navigate(`/products/${item.id}/flashsale-${indexImage}.jpg`)
   }
-  React.useEffect(() => {
-    try {
-      console.log('product', product)
-      const action = AddtoCart({
-        id: product.id,
-        product,
-        quantity: 1,
-        indexImage: `flashsale-${indeximg}.jpg`,
-      })
-      dispath(action)
-    } catch (error) {
-      console.log(error)
-    }
-  }, [product])
 
   return (
     <div className="flashsale">

@@ -27,7 +27,7 @@ export function CountDown() {
       sethourElement(hour)
       setminuteElement(minute)
       setsecondElement(second)
-      console.log('distance', distance)
+
       if (distance <= 0) {
         setdayElement(0)
         sethourElement(0)

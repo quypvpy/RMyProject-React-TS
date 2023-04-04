@@ -20,6 +20,7 @@ export function Laptop(props: LaptopProps) {
   const location = useLocation()
   const navigate = useNavigate()
   const [page, setPage] = React.useState(1)
+  const [count, setCount] = React.useState(1)
 
   let queryParams: any = React.useMemo(() => {
     const params: any = queryString.parse(location.search)
@@ -42,6 +43,7 @@ export function Laptop(props: LaptopProps) {
         setProductList(data)
         setPagination(pagination)
         setPage(pagination.page)
+        setCount(Math.ceil(pagination.total / Number.parseInt(pagination.limit)))
 
         const totalPage: any = Math.ceil(pagination.total / Number.parseInt(pagination.limit))
         if (totalPage === 0) return
@@ -121,12 +123,7 @@ export function Laptop(props: LaptopProps) {
           <ProductList data={productList} page={page} type="macbook"></ProductList>
           <div className={cx('pagination')}>
             <Stack spacing={5}>
-              <Pagination
-                onChange={handlePageChange}
-                count={Math.ceil(pagination.total / Number.parseInt(pagination.limit))}
-                page={page}
-                color="primary"
-              />
+              <Pagination onChange={handlePageChange} count={count} page={page} color="primary" />
             </Stack>
           </div>
         </div>

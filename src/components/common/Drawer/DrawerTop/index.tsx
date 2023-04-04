@@ -57,19 +57,20 @@ export function DrawerTop() {
   )
 
   return (
+    // <div className="">ssaads</div>
     <div>
       {(['top'] as const).map((anchor) => (
         <React.Fragment key={anchor}>
           {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
-          <Button
+          {/* <Button
             onClick={toggleDrawer(anchor, true)}
             sx={{ minWidth: 'unset ', paddingLeft: 'unset' }}
-          >
-            {' '}
-            <PanoramaFishEyeIcon
-              sx={{ fontSize: '35px', color: 'var(--color-primary)' }}
-            ></PanoramaFishEyeIcon>
-          </Button>
+          > */}
+          <PanoramaFishEyeIcon
+            onClick={toggleDrawer(anchor, true)}
+            sx={{ fontSize: '35px', color: 'var(--color-primary)' }}
+          ></PanoramaFishEyeIcon>
+          {/* </Button> */}
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}

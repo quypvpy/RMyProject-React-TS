@@ -105,9 +105,21 @@ export function WhatNew(props: WhatNewProps) {
     ) {
       ;(async () => {
         try {
-          const result = await productApi.get(item.id)
+          const result: any = await productApi.get(item.id)
           setproduct(result)
           setIndexImg(indexImage)
+
+          try {
+            const action = AddtoCart({
+              id: result.id,
+              product: result,
+              quantity: 1,
+              indexImage: `women-fashion-${indexImage}.jpg`,
+            })
+            dispath(action)
+          } catch (error) {
+            console.log(error)
+          }
         } catch (error) {
           console.log('fail to fetch product', error)
         }
@@ -115,19 +127,7 @@ export function WhatNew(props: WhatNewProps) {
       return
     } else navigate(`/products/${item.id}/women-fashion-${indexImage}.jpg`)
   }
-  React.useEffect(() => {
-    try {
-      const action = AddtoCart({
-        id: product.id,
-        product,
-        quantity: 1,
-        indexImage: `women-fashion-${indeximg}.jpg`,
-      })
-      dispath(action)
-    } catch (error) {
-      console.log(error)
-    }
-  }, [product])
+
   return (
     <section className="whatnew">
       <h1>Women Clothes</h1>

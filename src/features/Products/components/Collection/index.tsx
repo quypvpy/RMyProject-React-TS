@@ -118,9 +118,21 @@ export function Collection(props: CollectionProps) {
     ) {
       ;(async () => {
         try {
-          const result = await productApi.get(item.id)
+          const result: any = await productApi.get(item.id)
           setproduct(result)
           setIndexImg(indexImage)
+
+          try {
+            const action = AddtoCart({
+              id: result.id,
+              product: result,
+              quantity: 1,
+              indexImage: `beauty-${indexImage}.png`,
+            })
+            dispath(action)
+          } catch (error) {
+            console.log(error)
+          }
         } catch (error) {
           console.log('fail to fetch product', error)
         }
@@ -128,19 +140,6 @@ export function Collection(props: CollectionProps) {
       return
     } else navigate(`/products/${item.id}/beauty-${indexImage}.png`)
   }
-  React.useEffect(() => {
-    try {
-      const action = AddtoCart({
-        id: product.id,
-        product,
-        quantity: 1,
-        indexImage: `beauty-${indeximg}.png`,
-      })
-      dispath(action)
-    } catch (error) {
-      console.log(error)
-    }
-  }, [product])
 
   return (
     <div>
