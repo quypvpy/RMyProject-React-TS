@@ -42,15 +42,15 @@ export default class SimpleSlider extends Component {
         {/* phải để class này ở ngoài..chứ vô trong chỉnh k dc */}
         <Slider {...settings}>
           <Box className="wrapper">
-            <img src="src/assets/panel-5.png"></img>
+            <img src="./images/panel-5.png"></img>
           </Box>
 
           <Box className="wrapper">
-            <img src="src/assets/panel-1.png"></img>
+            <img src="./images/panel-1.png"></img>
           </Box>
 
           <Box className="wrapper">
-            <img src="src/assets/panel-2.png"></img>
+            <img src="./images/panel-2.png"></img>
           </Box>
         </Slider>
       </div>

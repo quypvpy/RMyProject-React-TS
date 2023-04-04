@@ -95,7 +95,8 @@ export function DetailPage(props: DetailPageProps) {
                 <Grid className={cx('grid')} container gap={8}>
                   <Grid item sx={{ width: '500px' }}>
                     <Box className={cx('image')}>
-                      <img src={`/src/assets/${indexImage}`}></img>
+                      {/* <img src={`/src/assets/${indexImage}`}></img> */}
+                      <img src={`/images/${indexImage}`}></img>
                     </Box>
                   </Grid>
                   <Grid item sx={{ flex: '1 1 0' }}>

@@ -103,7 +103,7 @@ export function AboutPage() {
             <img
               data-album="album-1"
               onClick={handleClickOpen}
-              src={`src/assets/page-collection-1.png`}
+              src={`./images/page-collection-1.png`}
               alt="image"
             />
           </div>
@@ -124,7 +124,7 @@ export function AboutPage() {
             <img
               data-album="album-1"
               onClick={handleClickOpen}
-              src="src/assets/page-collection-2.png"
+              src="./images/page-collection-2.png"
               alt="image"
             />
           </div>
@@ -134,7 +134,7 @@ export function AboutPage() {
             <img
               data-album="album-1"
               onClick={handleClickOpen}
-              src="src/assets/page-collection-3.png"
+              src="./images/page-collection-3.png"
               alt="image"
             />
           </div>
@@ -167,7 +167,7 @@ export function AboutPage() {
             <img
               data-album="album-1"
               onClick={handleClickOpen}
-              src="src/assets/page-collection-4.png"
+              src="./images/page-collection-4.png"
               alt="image"
             />
           </div>
@@ -185,8 +185,8 @@ export function AboutPage() {
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <div className={cx('image-lightbox')}>
-            <img src={`src/assets/page-collection-${currentIndex + 1}.png`} alt="image" />
-            {/* <img src={`src/assets/page-collection-1.png`} alt="image" /> */}
+            <img src={`./images/page-collection-${currentIndex + 1}.png`} alt="image" />
+            {/* <img src={`./images/page-collection-1.png`} alt="image" /> */}
           </div>
         </DialogContent>
 

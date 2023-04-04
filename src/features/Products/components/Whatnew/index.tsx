@@ -150,7 +150,7 @@ export function WhatNew(props: WhatNewProps) {
               {newProductList.map((item: any, index: any) => (
                 <div key={index}>
                   <div className="item" onClick={() => handleClick(event, item, index + 1)}>
-                    <img alt={index} src={`src/assets/women-fashion-${index + 1}.jpg`}></img>
+                    <img alt={index} src={`./images/women-fashion-${index + 1}.jpg`}></img>
                     <Box className="addtocart">
                       <Box className="icon-text">Add to cart</Box>
                       <Box className="icon">

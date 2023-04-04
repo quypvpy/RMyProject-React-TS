@@ -71,7 +71,7 @@ export function ProductList({ data, type, page }: ProductListProps) {
                 <img
                   onClick={() => handleClick(event, item, index + 1)}
                   alt={'image'}
-                  src={`src/assets/${type}-${page}-${index + 1}.jpg`}
+                  src={`./images/${type}-${page}-${index + 1}.jpg`}
                 ></img>
               ) : (
                 <Box

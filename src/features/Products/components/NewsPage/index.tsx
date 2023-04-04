@@ -15,7 +15,7 @@ export function NewsPage() {
       <div className={cx('wrapper')}>
         <div className={cx('left')}>
           <div className={cx('content')}>
-            <img className={cx('image')} src="/src/assets/page-new-1.png" alt="image" />
+            <img className={cx('image')} src="./images/page-new-1.png" alt="image" />
             <div className={cx('information')}>
               <div className={cx('name')}>10 best ways to lorem ipsum dolor glavrida amet</div>
               <div className={cx('date')}>
@@ -35,7 +35,7 @@ export function NewsPage() {
             </div>
           </div>
           <div className={cx('content')}>
-            <img className={cx('image')} src="/src/assets/page-new-2.png" alt="image" />
+            <img className={cx('image')} src="./images/page-new-2.png" alt="image" />
             <div className={cx('information')}>
               <div className={cx('name')}>10 best ways to lorem ipsum dolor glavrida amet</div>
               <div className={cx('date')}>
@@ -57,7 +57,7 @@ export function NewsPage() {
         </div>
         <div className={cx('right')}>
           <div className={cx('content')}>
-            <img className={cx('image')} src="/src/assets/page-new-3.png" alt="image" />
+            <img className={cx('image')} src="./images/page-new-3.png" alt="image" />
             <div className={cx('information')}>
               <div className={cx('name')}>10 best ways to lorem ipsum dolor glavrida amet</div>
               <div className={cx('date')}>
@@ -77,7 +77,7 @@ export function NewsPage() {
             </div>
           </div>
           <div className={cx('content')}>
-            <img className={cx('image')} src="/src/assets/page-new-4.png" alt="image" />
+            <img className={cx('image')} src="./images/page-new-4.png" alt="image" />
             <div className={cx('information')}>
               <div className={cx('name')}>10 best ways to lorem ipsum dolor glavrida amet</div>
               <div className={cx('date')}>

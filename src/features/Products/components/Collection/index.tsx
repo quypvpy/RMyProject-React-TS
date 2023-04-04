@@ -148,20 +148,20 @@ export function Collection(props: CollectionProps) {
           <div className="left">
             <div>
               <video autoPlay muted loop className="myVideo">
-                <source src="src/video/collection-3-video.mp4" type="video/mp4"></source>
+                <source src="./video/collection-3-video.mp4" type="video/mp4"></source>
               </video>
             </div>
             <div>
-              <img src="src/assets/collection-5.png" alt="image"></img>
+              <img src="./images/collection-5.png" alt="image"></img>
             </div>
           </div>
           <div className="right">
-            <img src="src/assets/collection-2.png" alt="image"></img>
+            <img src="./images/collection-2.png" alt="image"></img>
           </div>
         </div>
         <div className="collection">
           <div className="left">
-            <img src="src/assets/collection-1.png" alt="image"></img>
+            <img src="./images/collection-1.png" alt="image"></img>
           </div>
           <div className="right">
             {loading ? (
@@ -182,7 +182,7 @@ export function Collection(props: CollectionProps) {
                   {productList.map((item: any, index: any) => (
                     <div key={index}>
                       <div onClick={() => handleClick(event, item, index + 1)} className="item">
-                        <img alt={'image'} src={`src/assets/beauty-${index + 1}.png`}></img>
+                        <img alt={'image'} src={`./images/beauty-${index + 1}.png`}></img>
                         <Box className="addtocart">
                           <Box className="icon-text">Add to cart</Box>
                           <Box className="icon">

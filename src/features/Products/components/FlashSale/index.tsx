@@ -138,7 +138,7 @@ export function FlashSale(props: FlashSaleProps) {
     <div className="flashsale">
       <div className="left">
         <video autoPlay muted loop>
-          <source src="src/video/flashsale-1-video.mp4" type="video/mp4"></source>
+          <source src="./video/flashsale-1-video.mp4" type="video/mp4"></source>
         </video>
         <CountDown></CountDown>
       </div>
@@ -147,7 +147,7 @@ export function FlashSale(props: FlashSaleProps) {
           {productList.map((item: any, index: any) => (
             <div key={index}>
               <div onClick={() => handleClick(event, item, index + 1)} className="item">
-                <img alt={'image'} src={`src/assets/flashsale-${index + 1}.jpg`}></img>
+                <img alt={'image'} src={`./images/flashsale-${index + 1}.jpg`}></img>
 
                 <Box className="addtocart">
                   <Box className="icon-text">Add to cart</Box>
