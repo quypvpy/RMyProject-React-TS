@@ -1,8 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { ProductFeature } from './features/Products'
-import { ListPage } from './features/Products/pages'
-import { PageSearch } from './features/Products/pages/Search'
 
 import { publicRoutes } from './routes'
 

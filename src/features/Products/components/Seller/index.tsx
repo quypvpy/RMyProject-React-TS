@@ -4,7 +4,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 
 import styles from './seller.module.scss'
 import ClassNames from 'classnames/bind'
-import { SmoothHorizontal } from '@/utils'
+// import { SmoothHorizontal } from '@/utils'
 import Slider from 'react-slick'
 import productApi from '@/api/productApi'
 import { NewProductSkelaton } from '../Whatnew/newProductSkelaton'

@@ -78,6 +78,19 @@ export function FilterViewer({ filters = {}, onChange }: FilterViewerProps) {
   const visibleFilters = React.useMemo(() => {
     return FILTER_LIST.filter((x) => x.isVisible(filters))
   }, [filters])
+  const handleClickDelete = (x: any) => {
+    if (x.isRemovable) {
+      if (!onChange) return
+      const newFilters = x.onRemove(filters)
+      onChange(newFilters)
+    }
+  }
+  const handleClick = (x: any) => {
+    if (x.isRemovable) return
+    if (!onChange) return
+    const newFilters = x.onToggle(filters)
+    onChange(newFilters)
+  }
   return (
     <Box
       component={'ul'}
@@ -92,9 +105,23 @@ export function FilterViewer({ filters = {}, onChange }: FilterViewerProps) {
     >
       {/* Mình truyền filter vào để lên trên FILTERS LIST nó lấy nó check */}
       {/* {FILTER_LIST.filter((x) => x.isVisible(filters)).map((x) => ( */}
-      {visibleFilters.map((x) => (
+      {visibleFilters.map((x: any) => (
         <li key={x.id}>
           <Chip
+            sx={{ fontSize: '14px', color: 'var(--color-primary)' }}
+            label={x.getLabel(filters)}
+            color={x.isActive(filters) ? 'primary' : 'default'}
+            clickable={!x.isRemovable}
+            onClick={() => handleClick(x)}
+            onDelete={() => handleClickDelete(x)}
+          ></Chip>
+        </li>
+      ))}
+    </Box>
+  )
+}
+{
+  /* <Chip
             sx={{ fontSize: '14px', color: 'var(--color-primary)' }}
             label={x.getLabel(filters)}
             color={x.isActive(filters) ? 'primary' : 'default'}
@@ -108,6 +135,7 @@ export function FilterViewer({ filters = {}, onChange }: FilterViewerProps) {
                     onChange(newFilters)
                   }
             }
+            
             onDelete={
               x.isRemovable
                 ? () => {
@@ -117,9 +145,5 @@ export function FilterViewer({ filters = {}, onChange }: FilterViewerProps) {
                   }
                 : null
             }
-          ></Chip>
-        </li>
-      ))}
-    </Box>
-  )
+          ></Chip> */
 }
