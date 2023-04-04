@@ -113,16 +113,16 @@ export function ProductReviews() {
       </List> */}
       <div className={cx('left')}>
         <div className={cx('image')}>
-          <img src="/src/assets/reviews-1.png" alt="image" />
+          <img src="/images/reviews-1.png" alt="image" />
         </div>
         <div className={cx('image')}>
-          <img src="/src/assets/reviews-2.png" alt="image" />
+          <img src="/images/reviews-2.png" alt="image" />
         </div>
         <div className={cx('image')}>
-          <img src="/src/assets/reviews-3.png" alt="image" />
+          <img src="/images/reviews-3.png" alt="image" />
         </div>
         <div className={cx('image')}>
-          <img src="/src/assets/reviews-4.png" alt="image" />
+          <img src="/images/reviews-4.png" alt="image" />
         </div>
       </div>
       <div className={cx('right')}>
