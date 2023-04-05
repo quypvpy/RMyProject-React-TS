@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { ProductSort } from '../ProductSort'
 import { FilterByPrice, FilterByService } from '../Filters'
 import FilterListIcon from '@mui/icons-material/FilterList'
+import { DrawerFilter } from '@/components/common/Drawer'
 
 const cx = ClassNames.bind(styles)
 
@@ -101,7 +102,7 @@ export function Laptop(props: LaptopProps) {
         <div className={cx('left')}>
           {/* <img src="src/assets/collection-5.png" alt="image"></img> */}
           <video autoPlay muted loop className={cx('myVideo')}>
-            <source src="src/video/laptop-1-video.mp4" type="video/mp4"></source>
+            <source src="./video/laptop-1-video.mp4" type="video/mp4"></source>
           </video>
           <FilterByPrice onChange={handlePriceChange}></FilterByPrice>
           <FilterByService filters={queryParams} onChange={handleServiceChange}></FilterByService>
@@ -110,7 +111,8 @@ export function Laptop(props: LaptopProps) {
           <div className={cx('sort')}>
             <div className={cx('title')}>Laptop Sinh Viên</div>
             <div className={cx('filter')}>
-              <FilterListIcon sx={{ marginRight: '10px', fontSize: '20px' }}></FilterListIcon>
+              <DrawerFilter direction="left"></DrawerFilter>
+              {/* <FilterListIcon sx={{ marginRight: '10px', fontSize: '20px' }}></FilterListIcon> */}
               Filter
             </div>
             <div className={cx('width-sort')}>

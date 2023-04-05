@@ -20,6 +20,7 @@
 }
 .collection-wrapper .panel .left .myVideo {
   border-radius: 99%;
+
   height: 100%;
   width: 100%;
 }
@@ -39,10 +40,14 @@
 .collection {
   margin: 0 40px;
 
-  // height: 400px;
   display: flex;
   justify-content: space-between;
   gap: 30px;
+}
+
+.collection .saleprice {
+  position: absolute;
+  bottom: 0;
 }
 .collection .slick-list {
   padding-left: 6px;
@@ -63,12 +68,19 @@
 .collection .item {
   position: relative;
   margin-right: 20px;
+
   transition: all 0.3s linear;
   transform: scale(1);
   // height: 400px;
 }
+.collection .title {
+  padding-right: 20px;
+  margin-bottom: 5px;
+}
 .collection .information {
   margin-top: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 .collection img {
   cursor: pointer;
@@ -113,6 +125,8 @@
 }
 @media screen and (max-width: 1023px) {
   .collection-wrapper .panel {
+    margin-left: 0px;
+    margin-right: 0px;
     display: block;
   }
   .collection-wrapper .panel .left {
@@ -121,5 +135,10 @@
   .collection-wrapper .panel .right {
     margin-top: 10px;
     width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .collection-wrapper .panel .right {
+    display: none;
   }
 }

@@ -26,7 +26,6 @@
 .flashsale .saleprice {
   position: absolute;
   bottom: 0;
-  // margin-bottom: 10px;
 }
 .flashsale .item {
   position: relative;
@@ -62,6 +61,7 @@
   cursor: pointer;
 }
 .addtocart:hover .icon-text {
+  visibility: visible;
   padding-left: 15px;
   width: 120px;
   font-size: 15px;
@@ -80,6 +80,7 @@
   transition: all 0.25s linear;
 }
 .icon-text {
+  visibility: hidden;
   color: white;
   width: 20px;
   font-size: 0.5px;
@@ -110,5 +111,11 @@
   }
   .flashsale .right {
     margin: 50px 40px;
+  }
+
+  .addtocart:hover .icon-text {
+    padding-left: 7px;
+    width: 90px;
+    font-size: 12px;
   }
 }

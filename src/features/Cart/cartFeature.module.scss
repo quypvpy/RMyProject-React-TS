@@ -11,9 +11,15 @@
 .paper {
   background-color: unset !important;
 }
+.quantity {
+  margin-right: unset !important;
+}
+
 .note {
   margin-top: 147px;
+  padding: 0 15px;
   font-size: 30px;
+  line-height: 1.2;
   color: var(--color-primary);
 }
 .address {
@@ -60,7 +66,7 @@
 }
 .product-item > .name {
   width: 25%;
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 .left {
   width: 70%;
@@ -70,6 +76,14 @@
 }
 .title {
   font-size: 25px;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+}
+.price-respontive {
+  display: none;
 }
 @media screen and (max-width: 1023px) {
   .wrapper {
@@ -83,5 +97,31 @@
   .total {
     margin-top: 20px;
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cart {
+    margin-top: 120px;
+  }
+  .title-subtotal,
+  .subquantity {
+    display: none;
+  }
+  .quantity {
+    font-size: 15px !important;
+  }
+  .quantity button {
+    padding: 0 2px;
+  }
+  .price-respontive {
+    display: inline-block;
+  }
+  .image {
+    width: 70px;
+    height: 70px;
+  }
+  .title {
+    font-size: 20px;
   }
 }

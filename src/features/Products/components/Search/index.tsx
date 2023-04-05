@@ -24,6 +24,7 @@ export function Search({ valueSearch }: SearchProps) {
   const location = useLocation()
   const navigate = useNavigate()
   const [page, setPage] = React.useState(1)
+  const [count, setCount] = React.useState(1)
 
   let queryParams: any = React.useMemo(() => {
     const params: any = queryString.parse(location.search)
@@ -46,6 +47,7 @@ export function Search({ valueSearch }: SearchProps) {
         setProductList(data)
         setPagination(pagination)
         setPage(pagination.page)
+        setCount(Math.ceil(pagination.total / Number.parseInt(pagination.limit)))
 
         const totalPage: any = Math.ceil(pagination.total / Number.parseInt(pagination.limit))
         if (totalPage === 0) return
@@ -124,7 +126,7 @@ export function Search({ valueSearch }: SearchProps) {
               ></ProductSort>
 
               <div className={cx('filter')}>
-                <DrawerFilter></DrawerFilter>
+                <DrawerFilter direction="right"></DrawerFilter>
                 Filter
               </div>
             </div>
@@ -134,12 +136,7 @@ export function Search({ valueSearch }: SearchProps) {
             <ProductList data={productList}></ProductList>
             <div className={cx('pagination')}>
               <Stack spacing={5}>
-                <Pagination
-                  color="primary"
-                  onChange={handlePageChange}
-                  count={Math.ceil(paginations.total / Number.parseInt(paginations.limit))}
-                  page={page}
-                />
+                <Pagination color="primary" onChange={handlePageChange} count={count} page={page} />
               </Stack>
             </div>
           </div>

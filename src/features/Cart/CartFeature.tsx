@@ -65,7 +65,7 @@ export function CartFeature(props: CartFeatureProps) {
     <div>
       {cartItemCount < 1 ? (
         <MainLayout>
-          <div className={cx('note')}>Giỏ hàng của bạn không có sản phẩm nào !...</div>
+          <Box className={cx('note')}>Giỏ hàng của bạn không có sản phẩm nào !...</Box>
         </MainLayout>
       ) : (
         <MainLayout>
@@ -82,17 +82,34 @@ export function CartFeature(props: CartFeatureProps) {
                   <Box component={'span'}>Product</Box>
                   <Box component={'span'}>Price</Box>
                   <Box component={'span'}>Quantity</Box>
-                  <Box component={'span'}>Subtotal</Box>
+                  <Box className={cx('title-subtotal')} component={'span'}>
+                    Subtotal
+                  </Box>
                 </div>
                 {cartProductList.map((product: any) => (
                   <Box key={product.id} className={cx('product-item')}>
-                    <img width={80} height={80} src={`/src/assets/${product.indexImage}`}></img>
+                    <div className={cx('image')}>
+                      <img
+                        width={'100%'}
+                        height={'100%'}
+                        src={`./images/${product.indexImage}`}
+                      ></img>
+                    </div>
                     <Box component={'span'} className={cx('name')}>
                       {product.product.name}
                     </Box>
-                    <Box component={'span'}>{formatPrice(product.product.salePrice)}</Box>
+                    <Box component={'span'}>
+                      <span className={cx('price-respontive')}>
+                        {product.quantity}
+                        <Box component={'span'} sx={{ fontSize: '10px', margin: '0 3px' }}>
+                          ☓
+                        </Box>
+                      </span>
+                      {formatPrice(product.product.salePrice)}
+                    </Box>
+
                     <MyOutlinedInput
-                      // id={name}
+                      className={cx('quantity')}
                       type={'text'}
                       value={product.quantity}
                       startAdornment={
@@ -120,6 +137,7 @@ export function CartFeature(props: CartFeatureProps) {
                         </InputAdornment>
                       }
                     />
+
                     <Box component={'span'} className={cx('subquantity')}>
                       {/* {formatPrice(product.product.salePrice * cartItemCount)} */}
                       {formatPrice(product.product.salePrice * product.quantity)}

@@ -13,7 +13,11 @@ import styles from './menu.module.scss'
 const cx = ClassNames.bind(styles)
 type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
-export function DrawerFilter() {
+export interface DrawerProps {
+  direction: any
+}
+
+export function DrawerFilter({ direction }: DrawerProps) {
   const navigate = useNavigate()
 
   let queryParams: any = React.useMemo(() => {
@@ -29,7 +33,7 @@ export function DrawerFilter() {
     }
   }, [location.search])
 
-  const [state, setState] = React.useState({
+  const [state, setState]: any = React.useState({
     top: false,
     left: false,
     bottom: false,
@@ -70,7 +74,7 @@ export function DrawerFilter() {
   const handleClickTitle = () => {
     setState({
       ...state,
-      right: false,
+      [direction]: false,
     })
   }
   const list = (anchor: Anchor) => (
@@ -102,9 +106,28 @@ export function DrawerFilter() {
 
   return (
     <div>
-      {(['right'] as const).map((anchor) => (
+      {/* <React.Fragment key={direction}>
+        
+        <Button
+          onClick={toggleDrawer(direction, true)}
+          sx={{ minWidth: 'unset ', paddingLeft: 'unset' }}
+        >
+          {' '}
+          <FilterListIcon sx={{ marginRight: '10px', fontSize: '20px' }}></FilterListIcon>
+        </Button>
+        <SwipeableDrawer
+          anchor={direction}
+          open={state[direction]}
+          onClose={toggleDrawer(direction, false)}
+          onOpen={toggleDrawer(direction, true)}
+        >
+          {list(direction)}
+        </SwipeableDrawer>
+      </React.Fragment> */}
+
+      {/* {(['right'] as const).map((anchor: any) => ( */}
+      {([`${direction}`] as const).map((anchor: any) => (
         <React.Fragment key={anchor}>
-          {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
           <Button
             onClick={toggleDrawer(anchor, true)}
             sx={{ minWidth: 'unset ', paddingLeft: 'unset' }}
