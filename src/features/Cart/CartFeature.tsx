@@ -80,7 +80,9 @@ export function CartFeature(props: CartFeatureProps) {
               <Box className={cx('left')}>
                 <div className={cx('title')}>
                   <Box component={'span'}>Product</Box>
-                  <Box component={'span'}>Price</Box>
+                  <Box component={'span'} sx={{ width: '40%' }}>
+                    Price
+                  </Box>
                   <Box component={'span'}>Quantity</Box>
                   <Box className={cx('title-subtotal')} component={'span'}>
                     Subtotal
@@ -95,17 +97,20 @@ export function CartFeature(props: CartFeatureProps) {
                         src={`./images/${product.indexImage}`}
                       ></img>
                     </div>
-                    <Box component={'span'} className={cx('name')}>
-                      {product.product.name}
-                    </Box>
-                    <Box component={'span'}>
-                      <span className={cx('price-respontive')}>
-                        {product.quantity}
-                        <Box component={'span'} sx={{ fontSize: '10px', margin: '0 3px' }}>
-                          ☓
-                        </Box>
-                      </span>
-                      {formatPrice(product.product.salePrice)}
+
+                    <Box className={cx('column')}>
+                      <Box component={'span'} className={cx('name')}>
+                        {product.product.name}
+                      </Box>
+                      <Box component={'span'} sx={{ fontWeight: 'bold', marginTop: '6px' }}>
+                        <span className={cx('price-respontive')}>
+                          {product.quantity}
+                          <Box component={'span'} sx={{ fontSize: '10px', margin: '0 3px' }}>
+                            ☓
+                          </Box>
+                        </span>
+                        {formatPrice(product.product.salePrice)}
+                      </Box>
                     </Box>
 
                     <MyOutlinedInput
