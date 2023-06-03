@@ -7,7 +7,7 @@ export function CountDown() {
   let [minuteElement, setminuteElement] = React.useState(0)
   let [secondElement, setsecondElement] = React.useState(0)
   React.useEffect(() => {
-    let endDate = new Date('04/30/2023 00:00:00').getTime()
+    let endDate = new Date('06/30/2023 00:00:00').getTime()
     let check = setInterval(function () {
       let now = new Date().getTime()
       let distance = endDate - now

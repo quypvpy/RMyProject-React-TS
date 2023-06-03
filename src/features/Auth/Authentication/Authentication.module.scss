@@ -46,3 +46,11 @@
 .create-acount:hover {
   border-bottom: 1px solid var(--white);
 }
+@media screen and (max-width: 767px) {
+  .left {
+    display: none;
+  }
+  .form {
+    width: 100%;
+  }
+}
